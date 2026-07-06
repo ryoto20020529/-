@@ -1,7 +1,8 @@
-# X自動運用ワークフロー(対象: @yf8C21nnhFu4D2Y — 詳細は アカウント情報.md)
+# X自動運用ワークフロー(対象: ai-katsuyo / @yf8C21nnhFu4D2Y — 詳細は accounts/ai-katsuyo/account.md)
 
 担当: 戦略 / 承認: 社長
 
+> 【2026-07-06 社長決定】**アカウント分離。** この方法論は会社共通だが、成果物の保存先は必ず対象アカウント(`accounts/<acc>/`)配下。AI活用アカウントとCPA(公認会計士)の別事業を混同しない。詳細: accounts/README.md
 > 【2026-07-05 社長決定】**課金ゼロ運用に変更。** リサーチ〜投稿案生成まで自動、投稿は社長がコピペで手動。X API・GitHub Actions(要APIキー課金)は使わない。以下のAPI関連記述は将来課金を許容する場合のオプションとして残す。
 
 ## 全体像
@@ -9,13 +10,12 @@
 ```
 [毎日の定期実行(スケジュールトリガー)]
   1. リサーチ: Web調査で高エンゲージメント投稿の事例・型を収集
-       → docs/research/viral-patterns.md に型を蓄積
+       → docs/research/viral-patterns.md(型カタログ)+ accounts/<acc>/knowledge/伸び投稿DB.md に蓄積
   2. 企画: 型 × 発信の柱 からネタを選定
-  3. 編集: 投稿を生成(フック→ボディ→CTA、A/B 2案)
-       → posts/drafts/YYYY-MM-DD.md に保存
-  4. 投稿: scripts/post_to_x.py で X API v2 経由で投稿
-       → 承認モードに応じて「即投稿」or「社長承認後に投稿」
-  5. 公開済みは posts/published/ へ移動、タスクボード更新
+  3. 編集: 投稿を生成(フック→ボディ→CTA、3案)
+       → accounts/<acc>/posts/drafts/YYYY-MM-DD.md に保存
+  4. 投稿: 社長が手動コピペ(課金ゼロ運用)
+  5. 公開済みは accounts/<acc>/posts/published/ へ移動、タスクボード更新
 ```
 
 ## 投稿モード(社長が選択)
@@ -51,7 +51,7 @@ Claude Codeのスケジュールトリガーで毎日1回実行する。トリ�
 ```
 X自動運用の日次ルーチンを実行してください。
 1. researchでバズ投稿の型をWeb調査し viral-patterns.md を更新
-2. planningでネタ選定、editorで投稿A/B案を posts/drafts/ に作成
+2. planningでネタ選定、editorで投稿3案を accounts/<acc>/posts/drafts/ に作成
 3. [承認モードA] 社長に承認依頼を提示して終了
    [承認モードB] 推奨案を scripts/post_to_x.py で投稿し published へ移動
 4. secretaryがタスクボードを更新

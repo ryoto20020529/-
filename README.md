@@ -34,15 +34,17 @@ Claude Code でこのリポジトリを開いて、普通に日本語で依頼�
 ## ディレクトリ
 
 ```
-.claude/agents/   6人の担当エージェント定義
-docs/strategy/    発信方針・ペルソナ
-docs/research/    競合分析・市場調査レポート
-docs/planning/    投稿企画・ネタストック
-docs/marketing/   note導線・販売設計
-docs/tasks/       タスクボード・週次報告
-posts/drafts/     投稿の下書き
-posts/published/  公開済み投稿アーカイブ
+.claude/agents/          6人の担当エージェント定義
+accounts/ai-katsuyo/      AI活用アカウント(@yf8C21nnhFu4D2Y): knowledge/ planning/ posts/ assets/
+accounts/cpa/             公認会計士(CPA)関連の別事業 ※ai-katsuyoと完全分離・混同厳禁
+docs/strategy/            会社共通の戦略方法論
+docs/research/            会社共通のリサーチ手法・型カタログ・市場調査レポート
+docs/marketing/           note導線・販売設計
+docs/tasks/               タスクボード・週次報告
+scripts/                  共通ツール
 ```
+
+> **重要:** アカウントは `accounts/<name>/` で完全分離。AI活用アカウントとCPA事業のナレッジ・投稿・口調を混同しない。詳細は `accounts/README.md`。
 
 ## 最初にやること
 
