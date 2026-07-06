@@ -11,6 +11,7 @@ description: X(Twitter)投稿を生成する。伸び投稿DBの最強の型に�
 1. `docs/knowledge/コンセプト.md` — 発信軸・ターゲット・口調
 2. `docs/knowledge/NGワード.md` — 禁止ワード・禁止表現
 3. `docs/knowledge/伸び投稿DB.md` — 型とブクマ率の実データ
+4. `docs/knowledge/投稿最適化.md` — SEO・インプレッション・クリック対策(投稿前の最終チェック必須)
 
 ## 手順
 1. DBから**今週ブクマ率が最も高い型**を選ぶ(データ不足時は `docs/research/viral-patterns.md` の型から選び、その旨明記)
